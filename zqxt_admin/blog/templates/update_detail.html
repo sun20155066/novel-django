@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>更新小说页面</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+       {% csrf_token %}
+
+        标题：<input type="text" name="title" maxlength="30" required id="id_title" value={{ article.title }}><br/><br/>
+        内容：<input type="text" style="width:500px;height:200px;" name="content" cols="40" rows="10"
+                  required id="id_content" value={{ article.content }}><br/>
+
+        <input type="submit" value="update" />
+    </form>
+
+{% endblock %}

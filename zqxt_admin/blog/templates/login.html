@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div>
+        <form action="/login/" method="POST">
+             {% csrf_token %}
+            <br/><br/>
+            <h2>请登录 </h2>
+            用户名:<input type="text" name="username" /><br/><br/>
+            密 码: <input type="password" name="password" /><br/><br/>
+            <button type="submit">登录</button>
+            <p style="color: red">{{ login_error }}</p>
+        </form>
+</div>
+
+{% endblock %}
+

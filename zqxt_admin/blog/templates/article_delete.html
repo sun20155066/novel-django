@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h2>小说删除列表</h2>
+{% for article in article_delete_list %}
+    <h3>title:<a href="{% url 'delete' delete=article.id %}">{{ article.title }}</a></h3>
+
+{% endfor %}
+
+
+
+{% endblock %}

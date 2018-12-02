@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h2>小说列表</h2>
+{% for article in article_list %}
+     <h3>title:<a href="{% url 'detail' id=article.id %}">{{ article.title }}</a>&nbsp&nbspauthor:{{ article.user_id }}</h3>
+
+{% endfor %}
+
+
+
+{% endblock %}

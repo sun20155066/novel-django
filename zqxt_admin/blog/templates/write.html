@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>写小说页面</h1>
+{#    # Django的form的作用：#}
+{## 1、生成html标签#}
+{## 2、用来做用户提交的验证#}
+    <form method="POST" enctype="multipart/form-data">
+       {% csrf_token %}
+
+
+        标题：<input type="text" name="title" maxlength="30" required id="id_title" }><br/><br/>
+        内容：<input type="text" style="width:500px;height:200px;" name="content" cols="40" rows="10" required id="id_content" ><br/>
+
+        <input type="submit" value="update" />
+        <input type="submit" value="submit" />
+    </form>
+
+{% endblock %}

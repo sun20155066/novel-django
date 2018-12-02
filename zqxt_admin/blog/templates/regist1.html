@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+     <br/><br/>
+    <h1>注册页面</h1>
+{#    # Django的form的作用：#}
+{## 1、生成html标签#}
+{## 2、用来做用户提交的验证#}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{uf.as_p}}
+        <input type="submit" value="注册" />
+    </form>
+{% endblock %}

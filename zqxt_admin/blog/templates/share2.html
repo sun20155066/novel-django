@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<br>
+================
+<br>
+{% if title %}
+发布失败{{ title }}已存在
+<a href="http://127.0.0.1:8000/write">写小说</a>
+{% else %}
+发布成功！
+{% endif %}
+
+{% endblock %}
